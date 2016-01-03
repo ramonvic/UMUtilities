@@ -14,4 +14,6 @@
 +(NSString*) stringFromDate:(NSDate*)date withFormat:(NSString*)format;
 
 +(NSDate*) dateByAddingDays:(NSInteger) days toDate:(NSDate*)date;
+
++ (NSString *)timeRepresentationFromTimeInterval:(NSTimeInterval)interval;
 @end

@@ -40,10 +40,10 @@
     NSDate *finalDate = date;
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")) {
         
-         finalDate = [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitDay
-                                                                        value:days
-                                                                       toDate:date
-                                                                      options:0];
+        finalDate = [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitDay
+                                                             value:days
+                                                            toDate:date
+                                                           options:0];
     } else {
         NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
         [dateComponents setDay:days];
@@ -54,4 +54,14 @@
     
     return finalDate;
 }
+
++ (NSString *)timeRepresentationFromTimeInterval:(NSTimeInterval)interval
+{
+    NSInteger ti = (NSInteger)interval;
+    NSInteger seconds = ti % 60;
+    NSInteger minutes = (ti / 60) % 60;
+    NSInteger hours = (ti / 3600) % 24;
+    return [NSString stringWithFormat:@"%02ld:%02ld:%02ld", (long)hours, (long)minutes, (long)seconds];
+}
+
 @end
