@@ -20,14 +20,38 @@
     self.cornerRadius = self.cornerRadius ? self.cornerRadius : 4.0;
     self.borderWidth = self.borderWidth ? self.borderWidth : 1.0;
     
-    self.layer.cornerRadius = self.cornerRadius;
     self.layer.masksToBounds = YES;
     self.clipsToBounds = YES;
     
-    if(self.borderColor) {
+    [self setBorder];
+}
+
+-(void)setBorderColor:(UIColor *)borderColor
+{
+    _borderColor = borderColor;
+    
+    [self setBorder];
+}
+
+-(void)setBorderWidth:(CGFloat)borderWidth
+{
+    _borderWidth = borderWidth;
+    
+    [self setBorder];
+}
+
+-(void)setBorder
+{
+    if (self.borderColor && self.borderWidth) {
         self.layer.borderColor = self.borderColor.CGColor;
         self.layer.borderWidth = self.borderWidth;
     }
+}
+
+-(void)setCornerRadius:(CGFloat)cornerRadius
+{
+    _cornerRadius = cornerRadius;
+    self.layer.cornerRadius = cornerRadius;
 }
 
 @end
