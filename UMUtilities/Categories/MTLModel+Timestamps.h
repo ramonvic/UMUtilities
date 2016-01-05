@@ -7,6 +7,7 @@
 //
 
 #import <Mantle/Mantle.h>
+#import "NSDateFormatter+Web.h"
 
 @interface MTLModel (Timestamps)
 

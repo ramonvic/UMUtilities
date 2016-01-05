@@ -7,7 +7,6 @@
 //
 
 #import "MTLModel+Timestamps.h"
-#import "NSDateFormatter+Web.h"
 
 @implementation MTLModel (Timestamps)
 

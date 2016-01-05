@@ -10,12 +10,22 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AlertUtils : NSObject
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
-+(UIAlertView*) showAlert:(NSString *) title message:(NSString *) msg;
-+(UIAlertView*) showConfirm:(NSString *)title message:(NSString *)msg delegate:(id)delegate;
-+(UIAlertView*) showPrompt:(NSString *)title message:(NSString *)msg delegate:(id)delegate viewStyle: (NSInteger) viewStyle;
++(UIAlertView*) showAlert:(NSString *) title
+                  message:(NSString *) msg;
 
++(UIAlertView*) showConfirm:(NSString *)title
+                    message:(NSString *)msg
+                   delegate:(id)delegate;
 
++(UIAlertView*) showPrompt:(NSString *)title
+                   message:(NSString *)msg
+                  delegate:(id)delegate
+                 viewStyle: (NSInteger) viewStyle;
+
+#pragma GCC diagnostic pop
 
 +(UIAlertController*) openAlertIn:(UIViewController*)viewController
                             title:(NSString *) title
