@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 UMOBI. All rights reserved.
 //
 
-#import "AFURLResponseSerialization.h"
+#import <AFNetworking/AFURLResponseSerialization.h>
 
 static NSString * const JSONResponseSerializerWithDataKey = @"JSONResponseSerializerWithDataKey";
 

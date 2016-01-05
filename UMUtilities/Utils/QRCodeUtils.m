@@ -9,6 +9,8 @@
 #import "QRCodeUtils.h"
 #import "ImageUtils.h"
 
+#import <QRCodeReaderViewController/QRCodeReaderViewController.h>
+
 @implementation QRCodeUtils
 
 +(UIImage*)imageWithText:(NSString*)text;

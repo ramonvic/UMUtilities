@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ECSlidingViewController.h"
+#import <ECSlidingViewController/ECSlidingViewController.h>
 
 @interface ZoomAnimationController : NSObject <UIViewControllerAnimatedTransitioning,
 ECSlidingViewControllerDelegate,
