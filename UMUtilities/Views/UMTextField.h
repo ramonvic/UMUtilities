@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VMaskTextField.h"
+#import <VMaskTextField/VMaskTextField.h>
 
 @interface UMTextField : VMaskTextField
 {

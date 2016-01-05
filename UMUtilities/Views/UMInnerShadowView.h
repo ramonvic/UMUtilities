@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 UMOBI. All rights reserved.
 //
 
-#import "YIInnerShadowView.h"
+#import <YIInnerShadowView/YIInnerShadowView.h>
 
 @interface UMInnerShadowView : YIInnerShadowView
 @property(nonatomic, assign) IBInspectable NSInteger iterations;
