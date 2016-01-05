@@ -19,4 +19,5 @@ Pod::Spec.new do |s|
   s.dependency 'SDWebImage'
   s.dependency 'VMaskTextField', '~> 1.0.4'
   s.dependency 'Mantle', '~> 2.0'
+  s.dependency 'QRCodeReaderViewController', '~> 4.0.1'
 end

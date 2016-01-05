@@ -11,7 +11,29 @@
 
 #import <QRCodeReaderViewController/QRCodeReaderViewController.h>
 
+@interface QRCodeUtils ()
+
+@end
 @implementation QRCodeUtils
+
+
+
+static QRCodeReader *reader_;
+static QRCodeReaderViewController *vc_;
+
++(UIViewController*)openReaderIn:(UIViewController*)viewController completionBlock:(void (^) (NSString *resultAsString))completionBlock;
+{
+    reader_ = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
+    
+    // Instantiate the view controller
+    vc_ = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel" codeReader:reader_ startScanningAtLoad:YES showSwitchCameraButton:YES showTorchButton:YES];
+    
+    [vc_ setCompletionWithBlock:completionBlock];
+    
+    [viewController presentViewController:vc_ animated:YES completion:NULL];
+    return nil;
+}
+
 
 +(UIImage*)imageWithText:(NSString*)text;
 {
@@ -46,5 +68,6 @@
 {
     return nil;
 }
+
 
 @end

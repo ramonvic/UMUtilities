@@ -12,4 +12,6 @@
 
 +(UIImage*)imageWithText:(NSString*)text;
 +(NSString*)textWithImage:(UIImage*)image;
+
++(UIViewController*)openReaderIn:(UIViewController*)viewController completionBlock:(void (^) (NSString *resultAsString))completionBlock;
 @end
